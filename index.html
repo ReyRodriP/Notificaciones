@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="firts-section">
+        <h1 class="main-title">Notificaciones básicas</h1>
+
+        <p class="description">El objetivo de este pequeño proyecto es poder usarlo como base para futuras implementaciones en cuanto a un sistema de notificaciones en la web. Está abierto a mejoras en base a los cambios que guste.</p>
+
+        <p>Creado por: <span>Reynaldo Rodríguez Polanco</span></p>
+    </section>
+
+    <section class="second-section">
+        <div class="toast-container">
+            
+        <div class="toast sucess tiempo">
+            <div class="toast-icon">
+                <img src="icons/check-circle.svg" alt="advertencia">
+            </div>
+            <div class="toast-text">
+                <h3>Exito</h3>
+                <p>Todo correcto</p>
+            </div>
+            <div class="toast-button">
+                <button id="notification"><img src="icons/x.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="toast warning tiempo">
+            <div class="toast-icon">
+                <img src="icons/alert-triangle.svg" alt="advertencia">
+            </div>
+            <div class="toast-text">
+                <h3>Advertencia</h3>
+                <p>Hay ligeros detalles</p>
+            </div>
+            <div class="toast-button">
+                <button id="notification"><img src="icons/x.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="toast error">
+            <div class="toast-icon">
+                <img src="icons/x-circle.svg" alt="advertencia">
+            </div>
+            <div class="toast-text">
+                <h3>Error</h3>
+                <p>No se pudo completar la accion</p>
+            </div>
+            <div class="toast-button">
+                <button id="notification"><img src="icons/x.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*========Bienvenida========*/
+
+h1 {
+
+}
+
+.warning {
+    background-color: rgb(241, 217, 0);
+}
+
+.error {
+    background-color: #ff0000;
+}
+
+.sucess {
+    background-color: #33ff74;
+}
+
+.toast-container {
+    position: fixed;     
+    top: 20px;       
+    right: 20px;     
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    z-index: 3;  
+    align-items: flex-end;
+}
+
+.toast {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    gap: 20px;
+    align-items: stretch;
+    margin: 10px;
+    justify-content: flex-start;
+    animation: aparicion;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.toast-text p, h3 {
+    margin: 8px 0;
+}
+
+.toast-icon {
+    display: flex;
+}
+
+.toast-icon img{
+    width: 40px;
+    margin: 0 5px;
+}
+
+.toast-button {
+    background: rgba(0, 0, 0, 0.227);
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s ease all;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.toast-button img{
+    justify-content: center;
+    height: 100%;
+}
+
+.toast-button:hover {
+    background:rgba(0, 0, 0, 0.379);
+}
+
+.toast-button button{
+    border: none;
+    background: transparent;
+}
+
+/*========Animacion de cierre de notificacion========*/
+.cierre {
+    animation: salida;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /*Deja la animacion en la ultima posicion*/
+}
+
+.toast.tiempo::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    animation-name: tiempoRestante;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aparicion {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes salida {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(100% + 40px));
+    }   
+}
+
+@keyframes tiempoRestante {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
