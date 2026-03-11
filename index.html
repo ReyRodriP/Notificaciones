@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -10,15 +11,24 @@
     <section class="firts-section">
         <h1 class="main-title">Notificaciones básicas</h1>
 
-        <p class="description">El objetivo de este pequeño proyecto es poder usarlo como base para futuras implementaciones en cuanto a un sistema de notificaciones en la web. Está abierto a mejoras en base a los cambios que guste.</p>
+        <div class="main-text">
+            <p class="description">El objetivo de este pequeño proyecto es poder usarlo como base para futuras implementaciones en cuanto a un sistema de notificaciones en la web. Está abierto a mejoras en base a los cambios que guste. Espero que lo disfruten.</p>
 
-        <p>Creado por: <span>Reynaldo Rodríguez Polanco</span></p>
+            <p style="font-weight: bold;">Pulsa cualquier boton</p>
+        </div>
+        <div class="buttons" id="buttons">
+            <button class="btn-sucess">Éxito</button>
+            <button class="btn-warning">Advertencia</button>
+            <button class="btn-error">Error</button>
+        </div>
     </section>
 
     <section class="second-section">
-        <div class="toast-container">
+        <div class="toast-container" id="toast">
             
-        <div class="toast sucess tiempo">
+        <!-- ==============Modelo de las notificaciones============= -->
+
+        <!-- <div class="toast sucess tiempo">
             <div class="toast-icon">
                 <img src="icons/check-circle.svg" alt="advertencia">
             </div>
@@ -27,7 +37,7 @@
                 <p>Todo correcto</p>
             </div>
             <div class="toast-button">
-                <button id="notification"><img src="icons/x.svg" alt=""></button>
+                <button id="closeSucess"><img src="icons/x.svg" alt=""></button>
             </div>
         </div>
 
@@ -40,11 +50,11 @@
                 <p>Hay ligeros detalles</p>
             </div>
             <div class="toast-button">
-                <button id="notification"><img src="icons/x.svg" alt=""></button>
+                <button id="closeWarning"><img src="icons/x.svg" alt=""></button>
             </div>
         </div>
 
-        <div class="toast error">
+        <div class="toast error tiempo">
             <div class="toast-icon">
                 <img src="icons/x-circle.svg" alt="advertencia">
             </div>
@@ -53,11 +63,16 @@
                 <p>No se pudo completar la accion</p>
             </div>
             <div class="toast-button">
-                <button id="notification"><img src="icons/x.svg" alt=""></button>
+                <button id="closeError"><img src="icons/x.svg" alt=""></button>
             </div>
-        </div>
+        </div> -->
     </div>
     </section>
     
+    <footer>
+        <p>Creado por: <span>Reynaldo Rodríguez Polanco</span></p>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
